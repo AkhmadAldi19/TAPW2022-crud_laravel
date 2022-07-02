@@ -44,4 +44,22 @@ class PostController extends Controller
         return redirect()->route('post.index');
     }
     
+    // edit
+    public function edit(datakantin $post)
+    {
+        return view('post.edit', compact('post'));
+    }
+    
+    public function update(Request $request, datakantin $post)
+    {
+            //menu update
+            $post->update([
+                'namakantin'    => $request->namakantin,
+                'alamat'   => $request->alamat,
+                'kontak' => $request->kontak
+            ]);
+            
+            //redirect ke index
+            return redirect()->route('post.index');
+    }
 }

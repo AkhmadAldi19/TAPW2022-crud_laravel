@@ -68,9 +68,9 @@
                             </td>
                             <td class="px-10 py-2 text-center">
                             {{-- tabel isi aksi pada form submit --}}
-                            <form onsubmit="" action="" method="">
+                            <form onsubmit="return confirm('Yakin pengen hapus gak sayang loh ?😊😊');" action="{{ route('post.destroy', $post->id) }}" method="POST">
                                 {{-- tombol edit --}}
-                                <button class="bg-blue-400 text-white px-4 py-2 rounded     hover:bg-blue-500 text-xs focus:outline-none mr-2 font-poppins font-semibold"><a href="">
+                                <button class="bg-blue-400 text-white px-4 py-2 rounded     hover:bg-blue-500 text-xs focus:outline-none mr-2 font-poppins font-semibold"><a href="{{ route('post.edit', $post->id) }}">
                                     EDIT</a>
                                 </button>
                                 {{-- tombol hapus --}}
