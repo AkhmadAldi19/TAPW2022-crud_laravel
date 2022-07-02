@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class datakantin extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'namakantin', 'alamat', 'kontak'];
 }
