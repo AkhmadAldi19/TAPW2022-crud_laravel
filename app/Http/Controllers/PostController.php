@@ -43,7 +43,7 @@ class PostController extends Controller
         // return ke index
         return redirect()->route('post.index');
     }
-    
+
     // edit
     public function edit(datakantin $post)
     {
@@ -61,5 +61,12 @@ class PostController extends Controller
             
             //redirect ke index
             return redirect()->route('post.index');
+    }
+    public function destroy($id)
+    {
+        $post = datakantin::findOrFail($id);
+        $post->delete();
+
+        return redirect()->route('post.index');
     }
 }

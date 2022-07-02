@@ -74,6 +74,8 @@
                                     EDIT</a>
                                 </button>
                                 {{-- tombol hapus --}}
+                                @csrf
+                                @method('DELETE')
                                 <button type="submit" class="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-500 text-xs focus:outline-none"> 
                                     HAPUS
                                 </button>
