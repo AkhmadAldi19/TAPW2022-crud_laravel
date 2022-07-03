@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\datakantin;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\View;
+
 
 class PostController extends Controller
 {
@@ -62,6 +63,8 @@ class PostController extends Controller
             //redirect ke index
             return redirect()->route('post.index');
     }
+    
+    // perintah hapus
     public function destroy($id)
     {
         $post = datakantin::findOrFail($id);
